@@ -1,0 +1,8 @@
+# node modules folder
+node_modules/
+
+# vscode folder
+.vscode
+
+# launch.json
+.vscode/launch.json
