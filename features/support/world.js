@@ -6,6 +6,7 @@ const { setWorldConstructor, setDefaultTimeout } = require('cucumber');
 
 class CustomWorld {
     constructor() {
+        this.baseUrl = 'http://computer-database.herokuapp.com';
         this.driver = new webdriver.Builder()
             .forBrowser('chrome')
             .build();
