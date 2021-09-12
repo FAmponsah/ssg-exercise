@@ -12,7 +12,7 @@ Given('I am on the heroku app computers database domain {string}', async functio
     await this.driver.get(herokuAppUrl);
 });
 
-Given('I should see all hompage elements in their default states', async function () {
+Given('I see all hompage elements in their default states', async function () {
     const filterByNameButton = await this.driver.findElement(By.id(homepageLocators.FILTER_BY_NAME_BTN_ID));
     const searchBox = await this.driver.findElement(By.id(homepageLocators.SEARCH_BOX_ID));
     const addComputerButton = await this.driver.findElement(By.id(homepageLocators.ADD_COMPUTER_BTN_ID));
@@ -51,7 +51,7 @@ Given('I should see all hompage elements in their default states', async functio
     expect(nextButtonIsEnabled).to.equal(true, `The next pagination button was not enabled ${scenario}`);
 });
 
-Given('I should see a list of all available computers displayed', async function () {
+Given('I see a list of all available computers displayed', async function () {
     const resultsTable = await this.driver.findElement(By.className(homepageLocators.COMPUTERS_TABLE_ID));
     const tableBody = await resultsTable.findElement(By.tagName('tbody'));
     const tableRows = await tableBody.findElements(By.tagName('tr'));

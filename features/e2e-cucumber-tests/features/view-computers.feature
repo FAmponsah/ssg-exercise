@@ -4,14 +4,13 @@ Feature: As a web user I should be able to view computers in the computers datab
 @viewhomepageandtestpagination
 Scenario: As a web user I should be able to view computers in the computers database
   Given I am on the heroku app computers database domain '/computers'
-  And I should see all hompage elements in their default states
-  And I should see a list of all available computers displayed
+  And I see all hompage elements in their default states
+  And I see a list of all available computers displayed
   And there are more than ten computers available in the computer database
   When I click on the next pagination button
   Then I should see the page of the next list of computers
   And I can click on the previous pagination button
 
-@runtest
 @searchforcomputers
 Scenario Outline: As a web user I should search for a computer in the computers database
   Given I am on the heroku app computers database domain '/computers'
