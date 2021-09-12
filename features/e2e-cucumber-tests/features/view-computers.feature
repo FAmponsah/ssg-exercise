@@ -14,7 +14,7 @@ Scenario: As a web user I should be able to view computers in the computers data
 @searchforcomputers
 Scenario Outline: As a web user I should search for a computer in the computers database
   Given I am on the heroku app computers database domain '/computers'
-  When I search a '<Context>' computer as '<Computer>'
+  When I search for a '<Context>' computer as '<Computer>'
   Then I should see the section header as '<Header>'
   And I should see the message '<Message>'
   Examples:

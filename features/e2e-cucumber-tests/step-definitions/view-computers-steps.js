@@ -77,7 +77,7 @@ When('I click on the next pagination button', async function () {
     }
 });
 
-When('I search a {string} computer as {string}', async function (context, computerName) {
+When('I search for a {string} computer as {string}', async function (context, computerName) {
     searchContext = context;
     const searchField = await this.driver.findElement(By.id(homepageLocators.SEARCH_BOX_ID));
     const filterByNameButton = await this.driver.findElement(By.id(homepageLocators.FILTER_BY_NAME_BTN_ID));

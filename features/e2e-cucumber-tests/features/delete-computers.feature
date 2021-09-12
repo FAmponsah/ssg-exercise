@@ -1,6 +1,7 @@
 @deletecomputers
 Feature: As a web user I should be able to delete a computer in the computers database so that I can remove it from the computers listing page
-@runtest
+
+#@runtest
 @deleteexistingcomputer
 Scenario: As a web user I should be able to delete a computers in the computers database
   Given I am on the heroku app computers database domain '/computers'
