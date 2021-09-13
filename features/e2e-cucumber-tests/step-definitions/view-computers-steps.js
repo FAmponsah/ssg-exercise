@@ -2,6 +2,7 @@ const { Given, When, Then } = require('cucumber');
 const { By, until } = require('selenium-webdriver');
 const expect = require('chai').expect;
 const homepageLocators = require('../locators/homepage');
+const helperFunctions = require('../../support/helper-functions');
 
 let numberOfComputers;
 let searchContext = '';
@@ -10,6 +11,7 @@ let searchContext = '';
 Given('I am on the heroku app computers database domain {string}', async function (domain) {
     const herokuAppUrl = this.baseUrl.concat(domain);
     await this.driver.get(herokuAppUrl);
+    await helperFunctions.waitForTimeout(this.mediumTimeout);
 });
 
 Given('I see all hompage elements in their default states', async function () {

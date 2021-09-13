@@ -12,14 +12,14 @@ Given('I click on the computer name in the first row', async function () {
 });
 
 When('I click on the delete button', async function () {
-    await helperFunctions.waitForTimeout(2 * this.longtimeout);
+    await helperFunctions.waitForTimeout(2 * this.longTimeout);
     const deleteButton = await this.driver.findElement(By.css(deleteComputersLocators.DELETE_BTN));
     await this.driver.wait(until.elementIsVisible(deleteButton));
     await deleteButton.click();
 });
 
 Then('I should see the delete confirmation message {string}', async function(expectedDeleteConfirmationMessage) {
-    await this.driver.manage().setTimeouts({ implicit: this.longtimeout });
+    await this.driver.manage().setTimeouts({ implicit: this.longTimeout });
     const deleteComfirmationPane = await this.driver.findElement(By.css(deleteComputersLocators.DELETE_COMFIRMATION));
     await this.driver.wait(until.elementIsVisible(deleteComfirmationPane));
     const actualDeleteConfirmationMessage = await deleteComfirmationPane.getText();

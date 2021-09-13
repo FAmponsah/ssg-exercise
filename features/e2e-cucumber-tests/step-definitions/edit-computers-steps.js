@@ -6,7 +6,7 @@ const helperFunctions = require('../../support/helper-functions');
 
 
 Given('I enter the computer details as {string} {string} {string}', async function (newName, startDate, endDate) {
-    await helperFunctions.waitForTimeout(this.longtimeout)
+    await helperFunctions.waitForTimeout(this.longTimeout)
     const computerName = await this.driver.findElement(By.id(editCompLocators.COMPUTER_NAME_ID));
     const introducedDate = await this.driver.findElement(By.id(editCompLocators.INTRODUCED_DATE_ID));
     const discontinuedDate = await this.driver.findElement(By.id(editCompLocators.DISCONTINUED_BTN_ID));

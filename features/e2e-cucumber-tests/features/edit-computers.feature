@@ -1,7 +1,7 @@
 @editcomputers
 Feature: As a web user I should be able to edit a computer in the computers database so that I can update its details
 
-@runtest
+#@runtest
 @editexistingcomputer
 Scenario Outline: As a web user I should be able to edit a computer in the computers database: <Name>
   Given I am on the heroku app computers database domain '/computers'
