@@ -6,3 +6,6 @@ Scenario: As a visitor to the racedards page I should be able to view the date o
     Given I am on 'https://www.racingpost.com/racecards/'
     When I click the 'Big Race Entries' header
     Then the date of the next big race event is in the future
+
+
+
