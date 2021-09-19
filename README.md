@@ -13,6 +13,7 @@
    c. npm install selenium-cucumber-js
    d. npm install chai
    e. npm i chromedriver
+   f. npm install
 
 5. Create a .vscode folder in the root of your project and then create a launch.json file in it and set its content to:
     {
@@ -29,13 +30,13 @@
                 "cwd": "${workspaceFolder}",
                 "console": "integratedTerminal",
                 "args": [
-                    --tags", "@runtest",
+                    --tags", "@test",
                 ]
             }
         ]
     }
 
-6. Hit F5 in VSCode to run the project after changing tagging individual feature files or scenarios with @runtest.
+6. Hit F5 in VSCode to run the project after tagging individual feature files or scenarios with @test.
 
 # Tech Debt
 1. Download and add other webdrivers (e.g. Firefox, Edge, etc.), and add their cofigurations to world.js to enable running the tests in other browsers.
