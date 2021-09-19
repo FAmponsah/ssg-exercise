@@ -1,5 +1,5 @@
 module.exports = {
-    async getTodaysFormatedDate() {
+    async getTodaysFormattedDate() {
         const now = new Date();
         const formattedDate = now.getDate() + " " + 
                     now.toLocaleDateString("default", { month: "long" }).substring(0, 3) + " " + 
