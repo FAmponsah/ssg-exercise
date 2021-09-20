@@ -33,9 +33,9 @@ Then('the date of the next big race event is in the future', async function () {
         `The displayed date of the next big race event ${nextBigRaceEventDate} is not further than ${dateNow}`);
 });
 
-Then('I can view meeting details of a race result', async function () {
+Then('I can view {string} of a race result', async function (expectedSectionHeader) {
     const meetings = await this.driver.findElements(By.css(commonLocators.MEETING_DETAILS_SECTION));
     const meetingDetails = await meetings[firstItemIndex].getText();
-    const emptyString = '';
-    expect(meetingDetails).to.not.equal(emptyString, 'Meeting setails of a race result was not displayed as expected.');
+    const meetingDetailsIsDisplayed = meetingDetails.includes(expectedSectionHeader);
+    expect(meetingDetailsIsDisplayed).to.equal(true, 'The meeting details of a race result was not displayed as expected.');
 });

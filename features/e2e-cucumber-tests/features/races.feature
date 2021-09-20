@@ -11,4 +11,4 @@ Scenario: As a web user I should be able to view the date of the next big race e
 Scenario: As a web user I should be able to view meeting details of a race result
    Given I am on 'https://www.racingpost.com/results/'
    When I click the name link of a result
-   Then I can view meeting details of a race result
+   Then I can view 'Meeting details' of a race result
